@@ -12,6 +12,7 @@ angular.module('swagShop').component('detailsComponent', {
 
     this.addToCart = function( item ) {
       cartSrvc.add( item );
+      console.log( cartSrvc.currentCart() );
     };
   }
 });

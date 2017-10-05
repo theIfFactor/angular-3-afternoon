@@ -285,6 +285,8 @@ angular.module('swagShop').component('detailsComponent', {
 
 In this step, we'll complete the template for the `details.template.html` and link the details component using a `script` tag in `index.html`.
 
+We won't be able to visually test that `addToCart` is working correctly. However, if you want to test it by using the `console` you can add a `console.log( cartSrvc.currentCart() );` at the end of the method.
+
 ### Instructions
 
 * Open `app/details/details.template.html`.
@@ -343,10 +345,9 @@ In this step, we'll complete the template for the `details.template.html` and li
 
 <br />
 
-<img src="https://github.com/DevMountain/angular-3-afternoon/blob/solution/readme-assets/3.png" />
+<img src="https://github.com/DevMountain/angular-3-afternoon/blob/solution/readme-assets/2g.gif" />
 
-
-## Step 
+## Step 7
 
 ### Summary
 
