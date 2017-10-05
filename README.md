@@ -25,13 +25,39 @@ Live Example: <a href="https://devmountain.github.io/angular-3-afternoon/#!/">Cl
 
 In this step, we'll build out the swag component. The swag component is responsible for displaying information about swag, such as price, color, size, etc. The swag component will act as a re-usable component and will be used in both the list and cart component.
 
-In the swag component, there is a button available that a user can click. That button's action and label will have to be dynamic. When on the list view, we want that button to say 'details' and take a user to the detailed view of that swag. When on the cart view, we want that button to say 'remove' and remove the swag from the cart. Remember the title we passed down in the mini project? You can do the same for functions. When binding a function in the controller you use the '&' symbol.
+In the swag component, there is a button available that a user can click. That button's action and label will have to be dynamic. When on the list view, we want that button to say 'details' and take a user to the detailed view of that swag. When on the cart view, we want that button to say 'remove' and remove the swag from the cart. Remember the title we passed down in the mini project? You can do the same for functions. When binding a function in the controller you use the `&` symbol.
 
 ### Instructions
 
-
+* Open `app/swag/swag.component.js`.
+* Create the skeleton of an Angular component:
+  * Use `swagShop` as the application name.
+  * Use `swag` as the component name.
+* Link the template into the component and set the component's controller as `swagCtrl`.
+* Add bindings for the following:
+  * A `<` binding for `item`. `item` will be the swag object.
+  * A `&` binding for `action`. `action` will be the dynamic action that was explained in the summary.
+  * A `@` binding for `actionLabel`. `actionLabel` will be the button's label.
 
 ### Solution
+
+<details>
+
+<summary> <code> app/swag/swap.component.js </code> </summary>
+
+```js
+angular.module('swagShop').component('swag', {
+  templateUrl: 'app/swag/swag.template.html',
+  controllerAs: 'swagCtrl',
+  bindings: {
+    item: '<',
+    action: '&',
+    actionLabel: '@'
+  }
+});
+```
+
+</details>
 
 
 
