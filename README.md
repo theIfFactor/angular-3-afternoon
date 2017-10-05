@@ -23,22 +23,36 @@ Live Example: <a href="https://devmountain.github.io/angular-3-afternoon/#!/">Cl
 
 ### Summary
 
-In this step, we'll build out the list component. The list component is responsible for housing a list of swag that is available for purchase. 
+In this step, we'll build out the swag component. The swag component is responsible for displaying information about swag, such as price, color, size, etc. The swag component will act as a re-usable component and will be used in both the list and cart component.
+
+In the swag component, there is a button available that a user can click. That button's action and label will have to be dynamic. When on the list view, we want that button to say 'details' and take a user to the detailed view of that swag. When on the cart view, we want that button to say 'remove' and remove the swag from the cart. Remember the title we passed down in the mini project? You can do the same for functions. 
 
 ### Instructions
 
 
+
 ### Solution
+
+
 
 
 ## Step 2
 
 ### Summary
 
-In this step, we'll build out the swag component. The swag component is responsible for displaying information about swag, such as price, color, size, etc. The swag component will act as a re-usable component and will be used in both the list and cart component.
+In this step, we'll build out the list component. The list component is responsible for housing a list of swag that is available for purchase. In order to know which swag to list, we'll need to import the swag service into this component's controller.
 
 ### Instructions
 
+* Open `app/list/list.component.js`.
+* Create a component skeleton:
+  * Use `swagShop` as the application name.
+  * Call the component `list`.
+* Link the list template and call your controller `listCtrl`.
+* Create a component controller function:
+  * This controller should have the swag service injected into it.
+  * This controller should have `$state` injected into it.
+  * Assign an array called `swag` that equals the `swag` array in the swag service.
 
 ### Solution
 
