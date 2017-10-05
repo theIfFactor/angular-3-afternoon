@@ -112,6 +112,7 @@ In this step, we'll complete the template for the `swag.template.html` and link 
 
 ```html
 <!--Our Custom Script Files-->
+<script src="app/app.js"></script>
 <script src="app/services/swag.service.js"></script>
 <script src="app/services/cart.service.js"></script>
 <script src="app/swag/swag.component.js"></script>
