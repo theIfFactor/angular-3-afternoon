@@ -17,6 +17,8 @@ Live Example: <a href="https://devmountain.github.io/angular-3-afternoon/#!/">Cl
 * Run `npm i`.
 * Run `npm run dev` to start the development server.
 
+<img src="https://github.com/DevMountain/angular-3-afternoon/blob/solution/readme-assets/2.png" />
+
 ## Step 1
 
 ### Summary
