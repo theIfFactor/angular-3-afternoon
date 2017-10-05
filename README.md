@@ -37,7 +37,7 @@ In the swag component, there is a button available that a user can click. That b
 * Add bindings for the following:
   * A `<` binding for `item`. `item` will be the swag object.
   * A `&` binding for `action`. `action` will be the dynamic action that was explained in the summary.
-  * A `@` binding for `actionLabel`. `actionLabel` will be the button's label.
+  * A `@` binding for `actionLabel`. `actionLabel` will be the dynamic label that was explained in the summary.
 
 ### Solution
 
