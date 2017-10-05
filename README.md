@@ -25,7 +25,7 @@ Live Example: <a href="https://devmountain.github.io/angular-3-afternoon/#!/">Cl
 
 In this step, we'll build out the swag component. The swag component is responsible for displaying information about swag, such as price, color, size, etc. The swag component will act as a re-usable component and will be used in both the list and cart component.
 
-In the swag component, there is a button available that a user can click. That button's action and label will have to be dynamic. When on the list view, we want that button to say 'details' and take a user to the detailed view of that swag. When on the cart view, we want that button to say 'remove' and remove the swag from the cart. Remember the title we passed down in the mini project? You can do the same for functions. When binding a function in the controller you use the `&` symbol. The other binding you haven't seen yet is `<` which is used for `one-way` data binding. We'll use this `binding` symbol for when we bind `item` ( `item` will be the swag object ).
+In the swag component, there is a button available that a user can click. That button's action and label will have to be dynamic. When on the list view, we want that button to say 'details' and take a user to the detailed view of that swag. When on the cart view, we want that button to say 'remove' and remove the swag from the cart. Remember the title we passed down in the mini project? You can do the same for functions. When binding a function in the controller you use the `&` symbol. The other binding you haven't seen yet is `<` which is used for `one-way` data binding. We'll use this `binding symbol` for when we bind `item` ( `item` will be the swag object ).
 
 ### Instructions
 
