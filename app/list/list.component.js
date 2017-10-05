@@ -4,5 +4,9 @@ angular.module('swagShop').component('list', {
 
   controller: function( swagSrvc, $state ) {
     this.swag = swagSrvc.swag;
+
+    this.goToDetails = function (id){
+      $state.go('details', {id:id});
+    };
   }
 });

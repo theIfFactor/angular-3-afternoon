@@ -126,21 +126,35 @@ In this step, we'll complete the template for the `swag.template.html` and link 
 
 In this step, we'll build out the list component. The list component is responsible for displaying a list of swag that is available for purchase. In order to know which swag to list, we'll need to import the swag service into this component's controller.
 
-At the end of this step, we should see both the list and swag component in action.
-
 ### Instructions
 
+* Open `app/app.js` for reference to the application's router configuration.
 * Open `app/list/list.component.js`.
 * Create a component skeleton:
   * Use `swagShop` as the application name.
   * Call the component `list`.
-* Link the list template and call your controller `listCtrl`.
+* Link the template into the component and set the component's controller as `listCtrl`.
 * Create a component controller function:
   * This controller should have the swag service injected into it.
   * This controller should have `$state` injected into it.
   * Assign an array called `swag` that equals the `swag` array in the swag service.
+  * Assign a method called `goToDetails`:
+    * This method should have an `id` parameter.
+    * This method should call `$state.go` and use `id` for the route's `id` parameter.
+
+`goToDetails` will act as the dynamic action that will be passed into the `swag` component. We'll see this happen in the next step.
 
 ### Solution
+
+<details>
+
+<summary> <code> app/list/list.component.js </code> </summary>
+
+```js
+
+```
+
+</details>
 
 
 ## Step 3
