@@ -353,11 +353,58 @@ We won't be able to visually test that `addToCart` is working correctly. However
 
 In this step, we'll build out the cart component. The cart component is responsible for displaying all swag that is currently in the cart. It will also provide a user with the option to checkout, which in this case should empty the user's cart. This component will make use of the swag component to display the swag that is in the cart.
 
+Remember that the swag component's action and action label are dynamic. On the cart view, we want the action to remove the swag from the cart and the label to be `'remove'`.
+
 ### Instructions
 
+* Open `app/cart/cart.component.js`.
+* Create a skeleton of an Angular component.
+  * Use `swagShop` as the application name.
+  * Use `cart` as the component name.
+* Link the template into the component and set the component's controller as `cartCtrl`.
+* Create a controller function:
+* This function should have the cart service injected into it.
+* Assign an array called `cart` that equals the return of the `currentCart` method on the cart service.
+* Assign a method called `total`:
+  * This method should calculate the total of all the swag in the cart and return the sum.
+* Assign a method called `checkout`:
+  * This method should set the value of `cart` equal to the return of the `checkout` method on the cart service.
+* Assign a method called `removeItem`:
+  * This method should have an `index` parameter ( the index of the swag in the cart array ).
+  * This method should call the `remove` method on the cart service with `index` as an argument.
 
+`removeItem` will act as the dynamic action that will be passed into the swag component. We'll see this happen in the next step.
 
 ### Solution
+
+<details>
+
+<summary> <code> app/cart/cart.component.js </code> </summary>
+
+```js
+angular.module('swagShop').component('cart', {
+  templateUrl: 'app/cart/cart.template.html',
+  controllerAs: 'cartCtrl',
+
+  controller: function( cartSrvc ) {
+    this.cart = cartSrvc.currentCart();
+
+    this.total = function() {
+      return this.cart.reduce((total, current ) => total + current.price, 0);
+    };
+
+    this.checkout = function() {
+      this.cart = cartSrvc.checkout();
+    };
+
+    this.removeItem = function(index) {
+      cartSrvc.remove(index);
+    };
+  }
+});
+```
+
+</details>
 
 
 
