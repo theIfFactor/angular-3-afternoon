@@ -151,7 +151,18 @@ In this step, we'll build out the list component. The list component is responsi
 <summary> <code> app/list/list.component.js </code> </summary>
 
 ```js
+angular.module('swagShop').component('list', {
+  templateUrl: 'app/list/list.template.html',
+  controllerAs: 'listCtrl',
 
+  controller: function( swagSrvc, $state ) {
+    this.swag = swagSrvc.swag;
+
+    this.goToDetails = function (id){
+      $state.go('details', {id:id});
+    };
+  }
+});
 ```
 
 </details>
