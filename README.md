@@ -406,6 +406,26 @@ angular.module('swagShop').component('cart', {
 
 </details>
 
+## Step 8
+
+### Summary
+
+In this step, we'll complete the template for the `cart.template.html` and link the cart component using a `script` tag in `index.html`.
+
+### Instructions
+
+* Open `app/cart/cart.template.html`.
+* Update the `Total Here` comment to be the return of the `total` method.
+* Locate the two empty `ng-if` statements:
+  * The first `ng-if` should display the `div` if there is something in the cart.
+  * The second `ng-if` should display the `div` if there is nothing in the cart.
+* Locate the `Swag Here` comment:
+  * Render the swag component and be sure to include all its necessary bindings.
+  * The swag component should use an `ng-repeat` for every swag object in the cart.
+  * The action label should equal `'remove'` and remember to include the `$index` for the action.
+
+
+### Solution
 
 
 
