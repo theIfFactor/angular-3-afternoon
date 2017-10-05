@@ -59,6 +59,19 @@ angular.module('swagShop').component('swag', {
 
 </details>
 
+## Step 2
+
+### Summary
+
+In this step, we'll complete the template for the `swag.template.html` and link the swag component using a `script` tag in `index.html`.
+
+### Instructions
+
+
+
+### Solution
+
+
 
 
 
