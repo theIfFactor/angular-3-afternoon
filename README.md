@@ -119,14 +119,13 @@ In this step, we'll complete the template for the `swag.template.html` and link 
 
 </details>
 
-
-
-
 ## Step 2
 
 ### Summary
 
-In this step, we'll build out the list component. The list component is responsible for housing a list of swag that is available for purchase. In order to know which swag to list, we'll need to import the swag service into this component's controller.
+In this step, we'll build out the list component. The list component is responsible for displaying a list of swag that is available for purchase. In order to know which swag to list, we'll need to import the swag service into this component's controller.
+
+At the end of this step, we should see both the list and swag component in action.
 
 ### Instructions
 
