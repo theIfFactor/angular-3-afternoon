@@ -287,11 +287,63 @@ In this step, we'll complete the template for the `details.template.html` and li
 
 ### Instructions
 
-
+* Open `app/details/details.template.html`.
+* Update the commented out sections to use the correct property from a `swag object`.
+  * Hint: remember we bound the swag object on the controller property called `item`.
+* Update the button at the bottom of the template to use the `addToCart` method.
+  * Hint: What properties are on the `item` object?
+* Open `index.html`.
+* Add a new `script` tag for the `details` component.
 
 ### Solution
 
+<details>
 
+<summary> <code> app/details/details.template.html </code> </summary>
+
+```html
+<div class="detailed__parent">
+  <div class="detailed__child">
+    <h4 class="detailed__header">Details</h4>
+    <div class="detailed__content">
+      <div class="detailed__content-header">
+        <h4>{{ detailsCtrl.item.title }}</h4>
+        <span>${{ detailsCtrl.item.price }}</span>
+      </div>
+
+      <div class="detailed__content-middle">
+        <span>{{ detailsCtrl.item.size }}, {{ detailsCtrl.item.color }}</span>
+      </div>
+
+      <div class="detailed__content-footer">
+        <button ng-click="detailsCtrl.addToCart( detailsCtrl.item )">add to cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+```
+
+</details>
+
+<details>
+
+<summary> <code> index.html ( script section only ) </code> </summary>
+
+```html
+<!--Our Custom Script Files-->
+<script src="app/app.js"></script>
+<script src="app/services/swag.service.js"></script>
+<script src="app/services/cart.service.js"></script>
+<script src="app/swag/swag.component.js"></script>
+<script src="app/list/list.component.js"></script>
+<script src="app/details/details.component.js"></script>
+```
+
+</details>
+
+<br />
+
+<img src="https://github.com/DevMountain/angular-3-afternoon/blob/solution/readme-assets/3.png" />
 
 
 ## Step 
