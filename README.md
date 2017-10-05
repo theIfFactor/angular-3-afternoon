@@ -233,11 +233,51 @@ In this step, we'll complete the template for the `list.template.html` and link 
 
 In this step, we'll create the details component. The details component is responsible for displaying all information about one piece of swag and also providing an option to add the swag to the user's cart.
 
+Based on the router's configuration the details route is loaded with an `id` in the URL. We can use this `id` to scan the `swag` array in the swag service and the swag object we need. We can then bind that swag object onto the controller so we can display its properties in the DOM.
+
 ### Instructions
 
+* Open `app/details/details.component.js`.
+* Create a skeleton of an Angular component.
+  * Use `swagShop` as the application name.
+  * Use `detailsComponent` as the component name.
+    * If you use `details` as the name, the component will render as a `details` element.
+* Link the template into the component and set the component's controller as `detailsCtrl`.
+* Create a controller function:
+  * This function should have the swag service, the cart service, and `$stateParams` injected into it.
+  * Assign an array called `swag` that equals the `swag` array in the swag service.
+  * Assign an object called `item` that equals the `swag` object with the same `id` as the `id` in the URL.
+  * Assign a method called `addToCart`:
+    * This method should have an `item` parameter.
+    * This method should call the `add` method on the cart service and pass in `item` as an argument.
 
 ### Solution
 
+<details>
+
+<summary> <code> app/details/details.component.js </code> </summary>
+
+```js
+angular.module('swagShop').component('detailsComponent', {
+  templateUrl: 'app/details/details.template.html',
+  controllerAs: 'detailsCtrl',
+  
+  controller: function( swagSrvc, $stateParams, cartSrvc ) {
+    this.swag = swagSrvc.swag;
+
+    if ( $stateParams.id ) {
+      let itemIndex = this.swag.findIndex( item => item.id === $stateParams.id );
+      this.item = this.swag[ itemIndex ];
+    }
+
+    this.addToCart = function( item ) {
+      cartSrvc.add( item );
+    };
+  }
+});
+```
+
+</details>
 
 ## Step 
 
