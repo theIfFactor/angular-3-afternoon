@@ -67,6 +67,10 @@ In this step, we'll complete the template for the `swag.template.html` and link 
 
 ### Instructions
 
+* Open `app/services/swag.service.js` for a reference of what properties exist on a `swag object`.
+* Open `app/swag/swag.template.html`.
+
+
 
 
 ### Solution
