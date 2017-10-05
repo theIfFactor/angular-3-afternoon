@@ -140,7 +140,7 @@ In this step, we'll build out the list component. The list component is responsi
   * Assign an array called `swag` that equals the `swag` array in the swag service.
   * Assign a method called `goToDetails`:
     * This method should have an `id` parameter.
-    * This method should call `$state.go` and use `id` for the route's `id` parameter.
+    * This method should call `$state.go` for the `details` route and use `id` for the route's `id` parameter.
 
 `goToDetails` will act as the dynamic action that will be passed into the `swag` component. We'll see this happen in the next step.
 
