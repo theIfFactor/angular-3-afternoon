@@ -223,6 +223,9 @@ In this step, we'll complete the template for the `list.template.html` and link 
 
 </details>
 
+<br />
+
+<img src="https://github.com/DevMountain/angular-3-afternoon/blob/solution/readme-assets/1g.gif" />
 
 
 
