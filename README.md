@@ -233,7 +233,7 @@ In this step, we'll complete the template for the `list.template.html` and link 
 
 In this step, we'll create the details component. The details component is responsible for displaying all information about one piece of swag and also providing an option to add the swag to the user's cart.
 
-Based on the router's configuration the details route is loaded with an `id` in the URL. We can use this `id` to scan the `swag` array in the swag service and the swag object we need. We can then bind that swag object onto the controller so we can display its properties in the DOM.
+Based on the router's configuration the details route is loaded with an `id` in the URL. We can use this `id` to scan the `swag` array in the swag service and find the swag object we need. We can then bind that swag object onto the controller so we can display its properties in the template.
 
 ### Instructions
 
@@ -278,6 +278,21 @@ angular.module('swagShop').component('detailsComponent', {
 ```
 
 </details>
+
+## Step 6
+
+### Summary
+
+In this step, we'll complete the template for the `details.template.html` and link the details component using a `script` tag in `index.html`.
+
+### Instructions
+
+
+
+### Solution
+
+
+
 
 ## Step 
 
