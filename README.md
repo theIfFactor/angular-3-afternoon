@@ -69,9 +69,10 @@ In this step, we'll complete the template for the `swag.template.html` and link 
 
 * Open `app/services/swag.service.js` for a reference of what properties exist on a `swag object`.
 * Open `app/swag/swag.template.html`.
-
-
-
+* Update the commented our sections to use the correct property from a `swag object`.
+  * Hint: remember we bound the swag object on the controller property called `item`.
+* Update the button at the bottom of the template to use the `action` and `action label`.
+  * Hint: remember we bound the `action` function and `action label` string in `action` and `actionLabel`.
 
 ### Solution
 
