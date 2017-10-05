@@ -120,7 +120,7 @@ In this step, we'll complete the template for the `swag.template.html` and link 
 
 </details>
 
-## Step 2
+## Step 3
 
 ### Summary
 
