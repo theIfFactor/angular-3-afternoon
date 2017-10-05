@@ -167,8 +167,31 @@ angular.module('swagShop').component('list', {
 
 </details>
 
+## Step 4
 
-## Step 3
+### Summary
+
+In this step, we'll complete the template for the `list.template.html` and link the list component using a `script` tag in `index.html`.
+
+### Instructions
+
+* Locate the commented out section:
+  * Render the swag component and be sure to include all its necessary bindings.
+  * The swag component should use an `ng-repeat` for every swag object in `swag` on the controller.
+  * The action label should equal `'details'` and remember to include the swag's `id` for the `action`.
+
+### Solution
+
+
+
+
+
+
+
+
+
+
+## Step 
 
 ### Summary
 
@@ -180,7 +203,7 @@ In this step, we'll create the details component. The details component is respo
 ### Solution
 
 
-## Step 4
+## Step 
 
 ### Summary
 
