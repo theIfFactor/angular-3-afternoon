@@ -363,15 +363,15 @@ Remember that the swag component's action and action label are dynamic. On the c
   * Use `cart` as the component name.
 * Link the template into the component and set the component's controller as `cartCtrl`.
 * Create a controller function:
-* This function should have the cart service injected into it.
-* Assign an array called `cart` that equals the return of the `currentCart` method on the cart service.
-* Assign a method called `total`:
-  * This method should calculate the total of all the swag in the cart and return the sum.
-* Assign a method called `checkout`:
-  * This method should set the value of `cart` equal to the return of the `checkout` method on the cart service.
-* Assign a method called `removeItem`:
-  * This method should have an `index` parameter ( the index of the swag in the cart array ).
-  * This method should call the `remove` method on the cart service with `index` as an argument.
+  * This function should have the cart service injected into it.
+  * Assign an array called `cart` that equals the return of the `currentCart` method on the cart service.
+  * Assign a method called `total`:
+    * This method should calculate the total of all the swag in the cart and return the sum.
+  * Assign a method called `checkout`:
+    * This method should set the value of `cart` equal to the return of the `checkout` method on the cart service.
+  * Assign a method called `removeItem`:
+    * This method should have an `index` parameter ( the index of the swag in the cart array ).
+    * This method should call the `remove` method on the cart service with `index` as an argument.
 
 `removeItem` will act as the dynamic action that will be passed into the swag component. We'll see this happen in the next step.
 
