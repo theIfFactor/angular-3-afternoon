@@ -69,13 +69,55 @@ In this step, we'll complete the template for the `swag.template.html` and link 
 
 * Open `app/services/swag.service.js` for a reference of what properties exist on a `swag object`.
 * Open `app/swag/swag.template.html`.
-* Update the commented our sections to use the correct property from a `swag object`.
+* Update the commented out sections to use the correct property from a `swag object`.
   * Hint: remember we bound the swag object on the controller property called `item`.
 * Update the button at the bottom of the template to use the `action` and `action label`.
   * Hint: remember we bound the `action` function and `action label` string in `action` and `actionLabel`.
+* Open `index.html`.
+* Add a new `script` tag for the `swag` component.
 
 ### Solution
 
+<details>
+
+<summary> <code> app/swag/swag.template.html </code> </summary>
+
+```html
+<div class="swag-list__container">
+  <div class="swag-list__content">
+
+    <div class="swag-list__content-top">
+      <h4>{{ swagCtrl.item.title }}</h4>
+      <span>{{ swagCtrl.item.size }}</span>
+    </div>
+
+    <div class="swag-list__content-bottom">
+      <span>{{ swagCtrl.item.color }}</span>
+      <span>${{ swagCtrl.item.price}}</span>
+    </div>
+
+    <button class="swag__btn" 
+            ng-click="swagCtrl.action()" >
+      {{swagCtrl.actionLabel}}
+    </button>
+  </div>
+</div>
+```
+
+</details>
+
+<details>
+
+<summary> <code> index.html ( script section only ) </code> </summary>
+
+```html
+<!--Our Custom Script Files-->
+<script src="app/services/swag.service.js"></script>
+<script src="app/services/cart.service.js"></script>
+<script src="app/swag/swag.component.js"></script>
+```
+
+</details>
 
 
 
