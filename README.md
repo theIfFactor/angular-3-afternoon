@@ -175,14 +175,53 @@ In this step, we'll complete the template for the `list.template.html` and link 
 
 ### Instructions
 
+* Open `app/list/list.template.html`.
 * Locate the commented out section:
   * Render the swag component and be sure to include all its necessary bindings.
   * The swag component should use an `ng-repeat` for every swag object in `swag` on the controller.
   * The action label should equal `'details'` and remember to include the swag's `id` for the `action`.
+* Open `index.html`.
+* Add a new `script` tag for the list component.
 
 ### Solution
 
+<details>
 
+<summary> <code> app/list/list.template.html </code> </summary>
+
+```html
+<div class="list__parent">
+  <div class="list__child">
+    <span class="list__header">Browse Swag</span>
+    
+    <div class="list__swag-container">
+      <swag ng-repeat="item in listCtrl.swag"
+            item="item"
+            action="listCtrl.goToDetails(item.id)"
+            action-label="details">
+      </swag>
+    </div>
+    
+  </div>
+</div>
+```
+
+</details>
+
+<details>
+
+<summary> <code> index.html ( script section only ) </code> </summary>
+
+```html
+<!--Our Custom Script Files-->
+<script src="app/app.js"></script>
+<script src="app/services/swag.service.js"></script>
+<script src="app/services/cart.service.js"></script>
+<script src="app/swag/swag.component.js"></script>
+<script src="app/list/list.component.js"></script>
+```
+
+</details>
 
 
 
